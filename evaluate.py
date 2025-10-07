@@ -93,15 +93,15 @@ if __name__ == "__main__":
         print("Not a valid predictions filepath, file not found: ", predictions_filepath)
         sys.exit()
 
-    if not check_formatting(predictions_filepath):
-        sys.exit()
-
     testset = arguments[2]
     try:
         with open("data/" + testset + ".json", "r") as f:
             gold_data = json.load(f)
     except:
         print("No file data/" + testset + ".json found. Make sure the name of the set (train/dev/test) is specified in command line argument #2")
+        sys.exit()
+
+    if not check_formatting(predictions_filepath, gold_data):
         sys.exit()
 
     print(f"Everything looks OK. Evaluating file {predictions_filepath} on data/{testset}.json...")

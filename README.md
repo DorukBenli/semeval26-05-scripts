@@ -1,5 +1,5 @@
 # semeval26-05-scripts
-(WIP) Some scripts for Semeval 2026 Task 5. More baseline predictions, format checker and link to submission website will be added soon.
+(WIP) Some scripts for Semeval 2026 Task 5. Link to submission website will be added soon.
 
 # How to evaluate predictions
 
