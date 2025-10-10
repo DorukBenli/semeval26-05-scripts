@@ -15,7 +15,5 @@ if __name__ == "__main__":
         pred_list.append({"id": i, "prediction": labels[0]})
 
     with open(OUTPUT_FILEPATH, "w") as f:
-        pass  # clear file
-    for pred in pred_list:
-        with open(OUTPUT_FILEPATH, "a+") as f:
+        for pred in pred_list:
             f.write(json.dumps(pred) + "\n")
