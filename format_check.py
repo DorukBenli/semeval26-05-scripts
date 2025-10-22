@@ -15,7 +15,11 @@ def check_formatting(filepath: str, gold_data: dict) -> bool:
         lines = f.readlines()
     questionable_lines = []
     error_lines = []
-    expected_ids = list(gold_data.keys())
+    # Handle both dict (from evaluate.py) and list (from scoring.py) formats
+    if isinstance(gold_data, dict):
+        expected_ids = list(gold_data.keys())
+    else:  # list
+        expected_ids = [str(item["id"]) for item in gold_data]
     line_ids = []
     missing_lines = []
 
