@@ -46,7 +46,7 @@ def find_out_of_std_entries(json_path, jsonl_path, output_path):
 # Example usage
 if __name__ == "__main__":
     json_path = "C:/Users/suuser/Desktop/semeval26-05-scripts/data/test.json"
-    jsonl_path = "C:/Users/suuser/Desktop/semeval26-05-scripts/predictions/final_pred/predictions.jsonl"
+    jsonl_path = "C:/Users/suuser/Desktop/semeval26-05-scripts/predictions/submitted/predictions.jsonl"
     output_path = "C:/Users/suuser/Desktop/semeval26-05-scripts/out_of_std_entries.json"
 
     results = find_out_of_std_entries(json_path, jsonl_path, output_path)
